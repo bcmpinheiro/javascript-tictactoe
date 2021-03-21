@@ -22,15 +22,32 @@
 </head>
 <body>
     <div id="wrapper">
-        <div id="um"></div>
-        <div id="dois"></div>
-        <div id="tres"></div>
-        <div id="quatro"></div>
-        <div id="cinco"></div>
-        <div id="seis"></div>
-        <div id="sete"></div>
-        <div id="oito"></div>
-        <div id="nove"></div>
+        <div id='um' class="quadrante"></div>
+        <div id='dois' class="quadrante"></div>
+        <div id='tres' class="quadrante"></div>
+        <div id='quatro' class="quadrante"></div>
+        <div id='cinco' class="quadrante"></div>
+        <div id='seis' class="quadrante"></div>
+        <div id='sete' class="quadrante"></div>
+        <div id='oito' class="quadrante"></div>
+        <div id='nove' class="quadrante"></div>
     </div>
+
+    <script>
+        // Traz os elementos de classe "quadrante"
+        var quadrantes = document.getElementsByClassName("quadrante")
+        // mostra no navegador o valor de "quadrante encontrado"
+        console.log(quadrantes)
+        // looping que faz a contagem de "quadrantes" existentes, neste caso são 8 pq o 0 já conta como 1
+        // e inclui a próxima contagem no i++ até o final 
+        for(var i = 0; i < quadrantes.length; i++){
+            // inclui um evento de click no quadrante e adiciona o valor X quando clica.
+            quadrantes[i].addEventListener('click', function(e){
+                // e.target = html que eu cliquei
+                e.target.innerHTML = 'X'
+            })
+        }
+
+    </script>
 </body>
 </html>
